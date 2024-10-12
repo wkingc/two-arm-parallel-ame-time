@@ -9,8 +9,8 @@ output:
     theme: default
     highlight: textmate
     code_folding: show
-    mathjax: local
-    self_contained: FALSE
+    mathjax: default
+    self_contained: TRUE
     number_sections: FALSE
 ---
 
@@ -242,8 +242,8 @@ sim_sigma["Time3", "Time2"] <- 0.5
 
 # Generate multivariate normal random variables using the mean vectors and corresponding correlation of the outcomes over time.
 outcomeFun <- function(x) {
-  res <- rmvnorm(1, x, sigma = sim_sigma)
-  return(res)
+    res <- rmvnorm(1, x, sigma = sim_sigma)
+    return(res)
 }
 
 y <- t(apply(mu, 1, outcomeFun))
@@ -260,22 +260,23 @@ d <- d[order(d$id, d$Time), ]
 
 rownames(d) <- NULL
 
-d_DT <- datatable(d, escape = FALSE,
-                  extensions = c('Buttons', 'KeyTable'),
-                  class = 'cell-border stripe',
-                  rownames = TRUE,
-                  options = list(
-                    dom = 'Bfrtip',
-                    pageLength = 5,
-                    deferRender = TRUE,
-                    responsive = TRUE,
-                    scrollX = TRUE,
-                    scrollCollaspe = TRUE,
-                    paging = TRUE,
-                    autoWidth = FALSE,
-                    keys = TRUE,
-                    buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
-                  ))
+d_DT <- datatable(
+    d, escape = FALSE,
+    extensions = c('Buttons', 'KeyTable'),
+    class = 'cell-border stripe',
+    rownames = TRUE,
+    options = list(
+        dom = 'Bfrtip',
+        pageLength = 5,
+        deferRender = TRUE,
+        responsive = TRUE,
+        scrollX = TRUE,
+        scrollCollaspe = TRUE,
+        paging = TRUE,
+        autoWidth = FALSE,
+        keys = TRUE,
+        buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+    ))
 
 d_DT %>% formatRound(c("Y", "gamma1", "gamma2", "gamma3"), 2)
 ```
