@@ -4,6 +4,7 @@ author: "Wade K. Copeland"
 date: last-modified
 date-format: "MMMM DD, YYYY"
 bibliography: two_arm_parallel_ame_time.bib
+output-file: index.html
 format:
     html:
         embed-resources: true

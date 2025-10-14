@@ -1,0 +1,1 @@
+quarto render two_arm_parallel_ame_time.qmd
