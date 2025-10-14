@@ -34,7 +34,7 @@ In a 2-arm parallel randomized controlled trial (RCT) an outcome of interest is 
 
 In this tutorial, I consider the case where an outcome of interest is measured at a baseline, a second follow-up, and a third follow-up (referred to hereafter as time 1, time 2, and time 3).  In this design, it might be of interest to know the treatment effect at the time 3 that is unconditional on the treatment effect at time 2.  At present, we derive such an effect and its standard error and apply the theory to a simulated outcome that is correlated over time.
 
-All of the files needed to reproduce these results can be downloaded from the Git repository <a href="https://github.com/wkingc/two-arm-parallel-ame-time" target="_blank">https://github.com/wkingc/two-arm-parallel-ame-time</a>.
+This tutorial uses the R programming language [@Rlang2019].  All of the files needed to reproduce these results can be downloaded from the Git repository <a href="https://github.com/wkingc/two-arm-parallel-ame-time" target="_blank">https://github.com/wkingc/two-arm-parallel-ame-time</a>.
 
 # Required Libraries
 
