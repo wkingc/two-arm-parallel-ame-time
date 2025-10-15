@@ -3,7 +3,7 @@ title: "Average Marginal Effects in 2-Arm Parallel Randomized Controlled Trial O
 author: "Wade K. Copeland"
 date: last-modified
 date-format: "MMMM DD, YYYY"
-bibliography: two_arm_parallel_ame_time.bib
+bibliography: references.bib
 output-file: index.html
 format:
     html:
